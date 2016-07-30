@@ -1,0 +1,14 @@
+{
+  "name": "code-analogies",
+  "author": "Daniel Adler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danieladler/code-analogies.git"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
