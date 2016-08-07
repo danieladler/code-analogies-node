@@ -12,10 +12,9 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 ### Hello, World
 - Hello, World! with Express
   - ~~HW from single file (Hahn, p16)~~
-  - Require Handlebars and put HW markup in a .hbs template
-  - Modular: render HW from template(s) in multiple dir(s), using require/module.exports (Hahn, p25)
+  - ~~Require Handlebars and put HW markup in a .hbs template~~
   - http.createServer (Hahn, p28)
-
+  
 * * *
 
 ### Data Model
