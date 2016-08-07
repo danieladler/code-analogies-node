@@ -3,9 +3,9 @@ var express = require('express'),
     app     = express();
     Backbone = require('backbone'),
 
-
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+app.use(express.static('./public'));
 
 var stories = []
 app.locals.stories = stories;
@@ -34,6 +34,7 @@ var story2 = new storyModel({
 stories.push(story1, story2);
 
 app.get('/', function(req, res){
+  // res.render('index', {scripts: ['./main.js']});
   res.render('index');
 });
 
