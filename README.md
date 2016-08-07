@@ -11,11 +11,9 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 
 ### Hello, World
 - Hello, World! with Express
-  - HW from single file (Hahn, p16)
-  - Require Handlebars and put HW markup in a .hbs template
-  - Modular: render HW from template(s) in multiple dir(s), using require/module.exports (Hahn, p25)
-  - http.createServer (Hahn, p28)
-
+  - ~~HW from single file (Hahn, p16)~~
+  - ~~Require Handlebars and put HW markup in a .hbs template~~
+  
 * * *
 
 ### Data Model
@@ -28,7 +26,7 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 
 ### Styling
 - Bring in Foundation 6
-- Draft-quality  styling with uncomplicated CSS, using a couple Foundation 6 features to make sure it's working. 
+- Draft-quality  styling with uncomplicated CSS, using a couple Foundation 6 features to make sure it's working.
 
 * * *
 
