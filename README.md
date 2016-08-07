@@ -13,7 +13,6 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 - Hello, World! with Express
   - ~~HW from single file (Hahn, p16)~~
   - ~~Require Handlebars and put HW markup in a .hbs template~~
-  - http.createServer (Hahn, p28)
   
 * * *
 
