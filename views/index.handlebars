@@ -1,2 +1,18 @@
-<h2>Hello, World!</h2>
+<div id="main-content">
+  {{#if stories.length}}
+
+  {{#each stories}}
+    <div class="story-wrapper">
+      <p>
+        {{attributes.tech}} is like {{attributes.comp}}.
+        <br>
+        Here's why: {{attributes.story}}
+      </p>
+    </div>
+  {{/each}}
+  {{else }}
+    <p>There is no data.</p>
+  {{/if}}
+</div>
+
 <a href="/other">Go somewhere else.</a>
