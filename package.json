@@ -6,9 +6,7 @@
     "url": "https://github.com/danieladler/code-analogies.git"
   },
   "dependencies": {
-
+    "express": "^4.14.0"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
