@@ -1,6 +1,6 @@
-<div id="index-content">
-  <div class="story-wrapper">
-    {{#story }}
+<div id="library-content">
+  {{#if stories.length}}
+    {{#each stories}}
       <div class="story-wrapper">
         <p>
           {{technology}} is like {{comparison}}.
@@ -8,8 +8,10 @@
           Here's why: {{story}}
         </p>
       </div>
-    {{/story}}
-  </div>
+    {{/each}}
+  {{else }}
+    <p>There is no data.</p>
+  {{/if}}
 
-  <a href="/library">See all analogies --></a>
+  <a href="/">Go home.</a>
 </div>

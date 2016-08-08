@@ -1,6 +1,7 @@
-var express = require('express'),
-    exphbs  = require('express-handlebars'),
+var express  = require('express'),
+    exphbs   = require('express-handlebars'),
     mongoose = require('mongoose');
+    _        = require('lodash')
 
 var app = express();
 
@@ -17,13 +18,17 @@ var Story = require("./app/models/story")
 
 app.get('/', function(req, res){
   Story.find().exec(function(err, stories) {
+    var randomStory = _.sample(stories)
     if (err) { res.send(err) };
-    res.render('index', {stories: stories});
+    res.render('index', {story: randomStory})
   });
 });
 
-app.get('/other', function(req, res){
-  res.render('other');
+app.get('/library', function(req, res){
+  Story.find().exec(function(err, stories) {
+    if (err) { res.send(err) };
+    res.render('library', {stories: stories});
+  });
 });
 
 app.listen(3000, function() {
