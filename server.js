@@ -1,41 +1,25 @@
 var express = require('express'),
     exphbs  = require('express-handlebars'),
-    app     = express();
-    Backbone = require('backbone'),
+    mongoose = require('mongoose');
+
+var app = express();
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static('./public'));
 
-var stories = []
-app.locals.stories = stories;
-
-var storyModel = Backbone.Model.extend({
-  defaults: {
-    user_id: 0,
-    tech: "",
-    comp: "",
-    story: ""
-  }
+mongoose.connect('mongodb://localhost:27017/analogies');
+mongoose.connection.on('open', function() {
+    console.log("Connected to Mongoose");
 });
 
-var story1 = new storyModel({
-  tech: "Ruby",
-  comp: "English",
-  story: "It's easy to understand."
-})
-
-var story2 = new storyModel({
-  tech: "JS lexical scoping",
-  comp: "Continent -> Country -> City",
-  story: "Two people in Paris & Berlin live in the same continent but different countries & cities"
-})
-
-stories.push(story1, story2);
+var Story = require("./app/models/story")
 
 app.get('/', function(req, res){
-  // res.render('index', {scripts: ['./main.js']});
-  res.render('index');
+  Story.find().exec(function(err, stories) {
+    if (err) { res.send(err) };
+    res.render('index', {stories: stories});
+  });
 });
 
 app.get('/other', function(req, res){
