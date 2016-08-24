@@ -19,7 +19,8 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 ### Data: Backend
 - ~~MongoDB setup (Hahn, p119)~~
 - ~~Dynamically read models from db~~
-- Dynamically write models to db
+- ~~Dynamically write models to db~~
+- modular-ize routes into own files
 
 * * *
 
@@ -34,6 +35,7 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 ### Data: Frontend
 - Marionette
   - Create Backbone.Marionette model/collection/view logic
+  - Make Marionette el/region selectors use data-attrs instead of IDs
   - Add a couple routes (Hahn, p40) and render homepage & a fake 'my posts' page, in separate templates (Hahn, p43)
   - In each template, show different groups of static instances (Hahn, p43 – 49)
 
