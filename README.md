@@ -20,7 +20,8 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 - ~~MongoDB setup (Hahn, p119)~~
 - ~~Dynamically read models from db~~
 - ~~Dynamically write models to db~~
-- modular-ize routes into own files
+- ~~modular-ize routes into own files~~
+- after successful POST, redirect to the (new) view for that analogy
 
 * * *
 
