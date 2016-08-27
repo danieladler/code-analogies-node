@@ -1,0 +1,18 @@
+<div id="library-content">
+  {{#if stories.length}}
+    {{#each stories}}
+      <div class="story-wrapper">
+        <p>
+          {{technology}} is like {{comparison}}.
+          <br>
+          Here's why: {{story}}
+          <br>
+          <a href="/stories/{{id}}"> See story page </a>
+        </p>
+      </div>
+    {{/each}}
+  {{else }}
+    <p>There is no data.</p>
+  {{/if}}
+  <a href="/">Go home.</a>
+</div>
