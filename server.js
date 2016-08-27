@@ -21,10 +21,11 @@ mongoose.connection.on('open', function() {
 });
 
 // routes
-app.get('/',        routes.index);
-app.get('/library', routes.library);
-app.get('/new',     routes.new);
-app.post('/create', routes.create);
+app.get('/',            routes.index);
+app.get('/library',     routes.library);
+app.get('/new',         routes.new);
+app.post('/create',     routes.create);
+app.get('/stories/:id', routes.story)
 
 app.listen(3000, function() {
   console.log("Express running on port 3000");

@@ -29,7 +29,17 @@ exports.create = function(req, res){
 		if (err) {
 			res.send(err);
     } else {
-      res.redirect('/');
+      res.redirect('/stories/' + story.id);
     }
 	});
 };
+
+exports.story = function(req, res) {
+  Story.findById(req.params.id).exec(function (err, story) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.render('story', {story: story})
+    }
+  });
+}
