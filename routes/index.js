@@ -22,6 +22,7 @@ exports.new = function(req, res){
 
 exports.create = function(req, res){
 	var story = new Story();
+  console.log(req.body);
 	story.technology = req.body.technology;
 	story.comparison = req.body.comparison;
 	story.story      = req.body.story;

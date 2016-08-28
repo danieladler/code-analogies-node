@@ -27,6 +27,9 @@ Gotta have a plan. Below is a loose (and loosely ordered) outline of the steps a
 
 ### ES6 Setup
 - webpack.config:
+  - ~~basic setup of webpack-dev-server w/ current app architecture~~ NB: did
+  this task with major borrowing from: https://github.com/jerrysu/backbone-webpack-example.git
+  - instantiate sample backbone.marionette views for UI
   - babel for modular structure, from require to export/import
   - .hbs helpers (test by putting a helper in template)
   - sass compilation; change CSS to SASS
